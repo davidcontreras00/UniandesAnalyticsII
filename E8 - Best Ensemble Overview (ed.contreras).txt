@@ -1,0 +1,17 @@
+Con el fin de mejorar los modelos que se generan en machine Learning, se tiene la técnica de aprendizaje de métodos de conjunto (ensemble) que tiene como objetivo generar modelos de predicción más precisos, esto, basado en la combinación de varios modelos, generando disminución de la varianza, sesgo o mejorando las predicciones del modelo final. 
+Se han usado en muchas competiciones de aprendizaje automático de prestigio, como la competencia de Netflix, KDD 2009 y Kagle.
+Algunos de los métodos de ensemble más usados son:
+-	Metodos de conjunto secuencial, los aprendices base se general secuencialmente, por ejemplo, AdaBoost (basado en la idea de que contar con un grupo de expertos para tomar decisiones es mejor que tener uno solo).
+El objetivo del método es explotar la dependencia entre los aprendices base. El rendimiento general puede ser ajustado ponderando con mayor peso los casos que quedaron mal etiquetados previamente.
+
+-	Métodos conjuntos paralelos, en los que los alumnos base se generan paralelamente, por ejemplo, Random Forest o Bosques aleatorios (combinación de árboles predictores tal que cada árbol depende de los valores de un vector aleatorio probado independientemente y con la misma distribución para cada uno de estos).
+
+Los métodos de conjuntos utilizan la mayoría de las veces algoritmos de aprendizaje de base única para producir aprendices de base homogéneos, lo que se traduce en aprendices de mismo tipo, es decir, conjuntos homogéneos.
+Existen también métodos que utilizan aprendices heterogéneos, que conducen a conjuntos heterogéneos. Para que se tenga mayor precisión de los métodos de conjunto se hace necesario que los aprendices de base sean lo más preciso posibles y lo más diversos posibles. 
+Los métodos de conjunto han tenido mucho éxito al establecer un rendimiento récord en conjuntos de datos desafiantes y se encuentran entre los principales ganadores de las competencias de ciencia de datos de Kaggle.
+
+
+Bibliografía:
+https://blog.statsbot.co/ensemble-learning-d1dcd548e936  	 
+https://en.wikipedia.org/wiki/Ensemble_learning
+https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f
