@@ -1,0 +1,43 @@
+Tanto Gradient Boosting Classifier  como XGB Classifier  siguel el principio de incremento de gradiente. Sin embargo, XGB controla el ajuste excesivo, desde luego optimizando de paso la función de pérdida, lo que se traduce en rendimiento de recursos en general.
+El aumento de gradiente es una técnica de aprendizaje automático para problemas de regresión y clasificación, que produce un modelo de predicción en forma de un conjunto de modelos de predicción débiles, típicamente árboles de decisión. (Definición de Wikipedia).
+El objetivo como en todos los demás algoritmos es definir la función de pérdida y minimizarla (MSE). En este caso es tomar modelos con errores de predicción altas y lograr un mejoramiento. Busca algo así como quitar patrones presentes en los residuos del modelo de regresión, lo que se convierte en minimización de la función de pérdidas, de modo tal que la pérdida de la prueba alcance su valor mínimo.
+Una breve descripción de la metodología:
+-	Se modelan los datos con modelos simples y se buscan errores, que son en realidad datos que son difíciles de modelar por un modelo simple
+-	Se centra en los datos que son difíciles de modelar con el fin de encontrar mejores ajustes.
+-	Luego, se ajustan las predicciones dando ponderaciones a cada predictor, siguiendo una lógica que consiste en dar mayores ponderaciones a estos valores de difícil estimación y menores ponderaciones a las predicciones que están cercanas a los valores reales.
+-	Entrene al siguiente modelo débil utilizando muestras extraídas de acuerdo con la distribución de peso actualizada
+
+Por otro lado, XGB Classifier como se explicaba al inicio sigue de alguna manera la misma metodología del Gradient Boosting, con las siguientes características adicionales:
+En XGBoost, los árboles pueden tener un número variable de nodos terminales y el peso izquierdo de los árboles que se calculan con menos evidencia se reduce más. Newton Boosting utiliza el método de aproximaciones de Newton-Raphson que proporciona una ruta directa a los mínimos que el descenso de gradiente. El parámetro de asignación aleatoria adicional se puede usar para reducir la correlación entre los árboles, cuanto menor sea la correlación entre los clasificadores, mejor resultará nuestro conjunto de clasificadores. En general, XGBoost es más rápido que el aumento de gradiente, pero el aumento de gradiente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting
+https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d
+https://hackernoon.com/gradient-boosting-and-xgboost-90862daa6c77
+
